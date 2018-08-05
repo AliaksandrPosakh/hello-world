@@ -1,22 +1,39 @@
-var a=+prompt('введи число а','');
-var b=+prompt('введи число b','');
-var operator=prompt('введи операцию','');
 
-function calculator(a,b,operator){
-    if (operator=='+'){
-        alert(a+b);
-    }
-     else if(operator=='-'){
-        alert(a-b);
-    }
-     else if(operator=='/'){
-        alert(a/b);
-    }
-     else if(operator=='*'){
-        alert(a*b);
-    }
-    else{
-        alert('undefined command');
+var a;
+var b;
+var operator;
+
+function insertValue () {
+    a = +prompt ('введи число а', '');
+    b = +prompt ('введи число b', '');
+    operator = prompt ('введи операцию', '');
+}
+
+function calculator (a, b, operator) {
+    
+    switch (operator) {
+     case '+' :
+        alert (a + b);
+         break;
+
+      case '-' :
+        alert (a - b);
+        break;
+
+      case '/' :
+        alert (a / b);
+        break;
+    
+      case '*' :
+        alert (a * b);
+        break;
+
+      default:
+      alert ('неизвестная команда');
     }
 }
-calculator(a,b,operator);
+function output(){
+    return calculator(a, b, operator);
+}
+insertValue();
+output();
