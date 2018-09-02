@@ -13,19 +13,19 @@ function calculator (a, b, operator) {
     
     switch (operator) {
      case '+' :
-        alert (a + b);
+        return a + b;
          break;
 
       case '-' :
-        alert (a - b);
+        return a - b;
         break;
 
       case '/' :
-        alert (a / b);
+        return a / b;
         break;
     
       case '*' :
-        alert (a * b);
+        return a * b;
         break;
 
       default:
